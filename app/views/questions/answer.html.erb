@@ -1,0 +1,33 @@
+<h1>
+  Question
+</h1>
+<h2>
+  <%= params[:answer]  %>
+</h2>
+
+<h3>
+  - You
+</h3>
+
+<div class="answer">
+  <h1>
+    Answer
+  </h1>
+  <% if params[:answer] === "I am going to work" %>
+    <h2>
+      Great!
+    </h2>
+    <% elsif params[:answer].last === "?" %>
+      <h2>
+        Silly question, get dressed and go to work!.
+      </h2>
+    <% else %>
+    <h2>
+      I don't care, get dressed and go to work!
+    </h2>
+  <% end %>
+  <h3>- Your coach</h3>
+</div>
+
+<%= link_to "Ask a new question", ask_path %>
+<a href="/ask">Ask a new question</a>
